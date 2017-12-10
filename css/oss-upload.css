@@ -1,0 +1,78 @@
+*{
+	padding:0;
+	margin:0;
+}
+.oss-upload-btn{
+	width: 106px;
+    height: 30px;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: 13px;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    background: #f6fafb;
+}
+.oss-upload-btn:hover{
+	opacity: 0.85;
+}
+.oss-upload-filename{
+	color: #999;
+    font-size: 12px;
+    margin-left: 5px;
+    max-width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+.oss-upload-progress{
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+	background: -webkit-linear-gradient(left, rgba(244, 253, 234, 0.2), rgba(41, 218, 185, 0.2));
+    background: -moz-linear-gradient(left, rgba(244, 253, 234, 0.2), rgba(41, 218, 185, 0.2));
+    background: -o-linear-gradient(left, rgba(244, 253, 234, 0.2), rgba(41, 218, 185, 0.2));
+    background: -ms-linear-gradient(left, rgba(244, 253, 234, 0.2), rgba(41, 218, 185, 0.2));
+}
+.oss-upload-per{
+	font-size: 12px;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    width: 30px;
+}
+#oss-upload-file{
+	position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+.outer{
+	position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: rotate(90deg);
+    clip: rect(0px,11px,22px,0px);
+    border-radius: 100px;
+    background-color: rgba(41, 218, 185, 0.25);
+}
+
+
+.pie{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: rotate(270deg);
+    clip: rect(0px,11px,22px,0px);
+    border-radius: 100px;
+    background-color: rgba(41, 218, 185, 0.25)
+}

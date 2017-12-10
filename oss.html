@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oss.upload</title>
+	<link rel="stylesheet" href="./css/oss-upload.css" />
+</head>
+<body>
+	<!-- <div class="outer"></div> -->
+ 	<!-- <div class="pie"></div> -->
+	<div class="upload-cont">
+		
+	</div>
+	<script src="./js/http.js"></script>
+	<script src="./js/oss-upload.js"></script>
+	<script>
+	/* new */OSSupload({
+		target: $$('.upload-cont'),
+		preKey: 'site/',
+		// keepExtensions: true,
+		maxSize: 1024 * 1024 * 100, // 1M
+		// showProgress: true,
+		accept: ['png','jpg','jpep','gif','js','zip','rar','dmg'],
+		signatureUrl: 'https://famanoder.com/api/oss/config',
+		OSSurl: 'http://famanoder.oss-cn-beijing.aliyuncs.com',
+		// onProgress: function(percent){},
+		// onComplete: function(src){
+		// 	console.log('upload success! :' + src);
+		// },
+		// onError: function(evt){},
+		// onAbort:function(evt){},
+		// bucketParams:{name:123}
+	}).progress(function(per){
+		console.log(per);
+	}).then/* success */(function(res){
+		console.info(res)
+	}).catch/* failed */(function(err){
+		console.error(err);
+	});
+
+	</script>
+</body>
+</html>
